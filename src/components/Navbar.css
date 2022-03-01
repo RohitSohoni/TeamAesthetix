@@ -1,0 +1,94 @@
+.navbar {
+  position: relative;
+  width: 100%;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../public/Mask\ Group\ 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.795);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.logo {
+  position: relative;
+  width: 100%;
+  height: 0px;
+  max-width: 100%;
+}
+
+.flexbox {
+  z-index: 2;
+  height: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logoclass {
+  height: 80px;
+  position: fixed;
+  z-index: 10;
+}
+
+.mainpagetext {
+  position: relative;
+  color: aliceblue;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 600px;
+  align-items: center;
+}
+
+.gridcontainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto;
+  height: 200px;
+  justify-content: center;
+}
+
+.griditem1 {
+  height: 150px;
+}
+
+.griditem4 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.shopnowbutton {
+  color: aliceblue;
+  font-size: medium;
+  font-weight: 600;
+  background-color: crimson;
+  border-radius: 20px;
+  border: none;
+  width: 40%;
+}
+
+.griditem5 {
+  color: aliceblue;
+}
+
+.griditem6 {
+  color: aliceblue;
+  font-size: small;
+}
+
+.productArrayContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  height: 300px;
+  align-items: center;
+  gap: 30px 30px;
+}
