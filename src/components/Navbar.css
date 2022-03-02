@@ -10,8 +10,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.795);
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-y: auto;
+  /* overflow-x: hidden; */
 }
 
 .logo {
@@ -91,4 +91,19 @@
   height: 300px;
   align-items: center;
   gap: 30px 30px;
+}
+
+.footerContainer {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: aliceblue;
+  width: 100%;
+  padding-top: 1em;
+  flex-direction: column;
+  min-height: 30vh;
+  margin-top: 100vh;
+}
+
+.listUnstyled {
+  list-style-type: none;
 }

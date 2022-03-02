@@ -1,6 +1,6 @@
 import React from "react";
+import { link } from "react-router-dom";
 import { info } from "./productinfo";
-
 import "./Navbar.css";
 
 function Navbar() {
@@ -9,9 +9,11 @@ function Navbar() {
       <div className="background">
         <div className="navbar">
           <div className="flexbox">
+            {/* <link> */}
             <div className="logo">
               <img className="logoclass" src="./Final white-07.png" alt="" />
             </div>
+            {/* </link> */}
           </div>
           <div className="mainpagetext">
             <div className="gridcontainer">
@@ -28,7 +30,7 @@ function Navbar() {
                   justifyContent: "center",
                 }}
               >
-                <h1>The Winter Sale</h1>
+                <h1>The Spring Sale</h1>
               </div>
               <div
                 className="griditem3"
@@ -51,7 +53,8 @@ function Navbar() {
             className="griditem5"
             style={{ display: "flex", width: "100%", justifyContent: "center" }}
           >
-            Best fitness apparel delivered to your doorstep anywhere in India!
+            Best fitness apparel delivered to your doorstep anywhere in the
+            World!
           </h1>
         </div>
         <div
@@ -77,6 +80,8 @@ function Navbar() {
                   justifyContent: "center",
                   height: "40px",
                   padding: "10px",
+                  fontSize: "15px",
+                  color: "white",
                 }}
               >
                 <h1>{data.productname}</h1>
@@ -86,6 +91,8 @@ function Navbar() {
                   display: "flex",
                   width: "100%",
                   justifyContent: "center",
+                  fontSize: "15px",
+                  color: "white",
                 }}
               >
                 <h1>{data.price}</h1>
@@ -101,6 +108,21 @@ function Navbar() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="footerContainer">
+          <div className="footerList">
+            <ul className="listUnstyled">
+              <li>Support</li>
+              <li>Help Centre</li>
+              <li>Contact Us</li>
+              <li>Return/Exchange Policy</li>
+            </ul>
+          </div>
+          <hr />
+          <div className="footerCopyright">
+            &copy;{new Date().getFullYear()} TEAM AESTHETIX INC | ALL RIGHTS
+            RESERVED | TERMS OF SERVICE | PRIVACY
+          </div>
         </div>
       </div>
     </header>
