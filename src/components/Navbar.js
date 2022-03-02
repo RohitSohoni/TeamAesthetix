@@ -109,7 +109,29 @@ function Navbar() {
             </div>
           ))}
         </div>
+
         <div className="footerContainer">
+          <div className="newsletterClass">
+            <div className="newsletterText">
+              <h1>Sign Up For TeamX Newsletter</h1>
+            </div>
+            <div className="newsletterEmailBox">
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                className="newsletterEmail"
+              ></input>
+            </div>
+          </div>
+          <div className="signUpClass">
+            <button className="signUpButton">SIGN UP</button>
+          </div>
+          <div className="socialLinks">
+            <h1>FOLLOW US ON:</h1>
+            <img className="allLogo" src="./instagram.png" alt="" />
+            <img className="allLogo" src="./facebook.png" alt="" />
+            <img className="allLogo" src="./twitter.png" alt="" />
+          </div>
           <div className="footerList">
             <ul className="listUnstyled">
               <li>Support</li>
