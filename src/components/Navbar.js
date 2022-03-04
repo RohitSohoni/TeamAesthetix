@@ -1,19 +1,37 @@
 import React from "react";
-import { link } from "react-router-dom";
+import { useRef } from "react";
 import { info } from "./productinfo";
 import "./Navbar.css";
+import StarRatings from "react-star-ratings";
 
 function Navbar() {
+  const shopNowScroll = useRef(null);
+  const gotoshopNowScroll = () => {
+    console.log(shopNowScroll.current.offsetTop);
+    // document
+    //   .getElementById("scroller")
+    //   .scroll(
+    //     0,
+    //     shopNowScroll.current.offsetTop -
+    //       (shopNowScroll.current.offsetTop * 10) / 100
+    //   );
+    // window.scrollTo({
+    //   top: shopNowScroll.current.offsetTop,
+    //   behavior: "smooth",
+    // });
+    document.getElementById("reference").scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header>
       <div className="background">
         <div className="navbar">
           <div className="flexbox">
-            {/* <link> */}
             <div className="logo">
               <img className="logoclass" src="./Final white-07.png" alt="" />
             </div>
-            {/* </link> */}
           </div>
           <div className="mainpagetext">
             <div className="gridcontainer">
@@ -43,7 +61,9 @@ function Navbar() {
                 <h2>Flat 20% Off</h2>
               </div>
               <div className="griditem4">
-                <button className="shopnowbutton">SHOP NOW</button>
+                <button className="shopnowbutton" onClick={gotoshopNowScroll}>
+                  SHOP NOW
+                </button>
               </div>
             </div>
           </div>
@@ -60,6 +80,8 @@ function Navbar() {
         <div
           className="griditem6"
           style={{ display: "flex", width: "100%", justifyContent: "center" }}
+          ref={shopNowScroll}
+          id="reference"
         >
           <h1>
             Shop from our wide variety of apparel to get your cool gym fit
@@ -71,17 +93,20 @@ function Navbar() {
             <div
               className="productArrayItem"
               style={{ width: "100%", height: "100%" }}
+              // send "data" variable as props to redirect activity
             >
-              <img src={data.image} style={{ height: "250px" }}></img>
+              <img
+                src={data.image}
+                style={{ height: "250px", borderRadius: "10px" }}
+              ></img>
               <div
                 style={{
                   display: "flex",
                   width: "100%",
                   justifyContent: "center",
                   height: "40px",
-                  padding: "10px",
                   fontSize: "15px",
-                  color: "white",
+                  color: "black",
                 }}
               >
                 <h1>{data.productname}</h1>
@@ -92,7 +117,8 @@ function Navbar() {
                   width: "100%",
                   justifyContent: "center",
                   fontSize: "15px",
-                  color: "white",
+                  color: "black",
+                  marginTop: "10px",
                 }}
               >
                 <h1>{data.price}</h1>
@@ -104,7 +130,14 @@ function Navbar() {
                   justifyContent: "center",
                 }}
               >
-                <img src={data.rating} style={{ height: "30px" }}></img>
+                <StarRatings
+                  rating={data.rating}
+                  starRatedColor="orange"
+                  numberOfStars={5}
+                  name="rating"
+                  starEmptyColor="white"
+                  starDimension="30px"
+                />
               </div>
             </div>
           ))}
