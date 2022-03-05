@@ -7,7 +7,7 @@ import StarRatings from "react-star-ratings";
 function Navbar() {
   const shopNowScroll = useRef(null);
   const gotoshopNowScroll = () => {
-    console.log(shopNowScroll.current.offsetTop);
+    // console.log(shopNowScroll.current.offsetTop);
     // document
     //   .getElementById("scroller")
     //   .scroll(
@@ -80,7 +80,6 @@ function Navbar() {
         <div
           className="griditem6"
           style={{ display: "flex", width: "100%", justifyContent: "center" }}
-          ref={shopNowScroll}
           id="reference"
         >
           <h1>
