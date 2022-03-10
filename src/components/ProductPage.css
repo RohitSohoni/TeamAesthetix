@@ -1,9 +1,11 @@
 .background2 {
   width: 100%;
   height: 100vh;
-  background-image: url("../../public/Mask\ Group\ 1.png");
+  background-image: url("../../public/BackgroundNew2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-blend-mode: hard-light;
+
   background-color: rgba(0, 0, 0, 0.795);
   overflow-y: auto;
   /* overflow-x: hidden; */
@@ -33,4 +35,91 @@
   height: 80px;
   position: fixed;
   z-index: 10;
+}
+
+.productContainerCard {
+  background-color: rgba(240, 248, 255, 0.8);
+  background-position: center;
+  padding: 50px;
+  text-align: left;
+  border-radius: 20px;
+  margin-top: 10em;
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-bottom: -30em;
+}
+
+.productImage {
+  border-radius: 20px;
+}
+
+.footerContainer {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: aliceblue;
+  width: 100%;
+  padding-bottom: 1em;
+  flex-direction: column;
+  margin-top: 100vh;
+}
+
+.listUnstyled {
+  list-style-type: none;
+}
+
+.listUnstyled {
+  font-size: large;
+}
+
+.footerCopyright {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.allLogo {
+  height: 30px;
+  padding-top: 1.4em;
+}
+
+.newsletterText {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletterEmailBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 30px;
+}
+
+.newsletterEmail {
+  width: 20%;
+}
+
+.signUpButton {
+  color: aliceblue;
+  font-size: medium;
+  font-weight: 600;
+  background-color: crimson;
+  border-radius: 20px;
+  border: none;
+  width: 10%;
+}
+
+.signUpClass {
+  display: flex;
+  justify-content: center;
+  height: 25px;
+  padding-top: 1em;
 }

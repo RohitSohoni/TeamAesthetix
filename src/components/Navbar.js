@@ -1,10 +1,13 @@
 import React from "react";
 import { useRef } from "react";
+import { useState } from "react";
 import { info } from "./productinfo";
 import "./Navbar.css";
 import StarRatings from "react-star-ratings";
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-function Navbar() {
+function Navbar(props) {
   const shopNowScroll = useRef(null);
   const gotoshopNowScroll = () => {
     // console.log(shopNowScroll.current.offsetTop);
@@ -24,6 +27,15 @@ function Navbar() {
     });
   };
 
+  const [query, setQuery] = useState("");
+
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = "ProductPage";
+    navigate(path, { state: { name: "Hello" } });
+    // history.push("/ProductPage");
+  };
+
   return (
     <header>
       <div className="background">
@@ -32,6 +44,28 @@ function Navbar() {
             <div className="logo">
               <img className="logoclass" src="./Final white-07.png" alt="" />
             </div>
+          </div>
+          <div className="searchButton">
+            <input
+              type="search"
+              placeholder="Search"
+              onChange={(event) => setQuery(event.target.value)}
+            ></input>
+            {info
+              .filter((data) => {
+                if (query === "") {
+                  return data;
+                } else if (
+                  data.productname.toLowerCase().includes(query.toLowerCase())
+                ) {
+                  return data;
+                }
+              })
+              .map((data, index) => (
+                <div className="box" key={index}>
+                  <p>{data.productname}</p>
+                </div>
+              ))}
           </div>
           <div className="mainpagetext">
             <div className="gridcontainer">
@@ -92,6 +126,7 @@ function Navbar() {
             <div
               className="productArrayItem"
               style={{ width: "100%", height: "100%" }}
+              onClick={routeChange}
               // send "data" variable as props to redirect activity
             >
               <img
