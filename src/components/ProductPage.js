@@ -2,7 +2,7 @@ import React from "react";
 import "./ProductPage.css";
 // import { useLocation } from "react-router-dom";
 
-function productpage(props) {
+function productpage() {
   // console.log(props.location.state);
   // const location = useLocation();
   // console.log(props.location.state.name);
@@ -15,6 +15,7 @@ function productpage(props) {
           </div>
         </div>
         <div className="productContainerCard">
+          {/* <p>{dataFromProductData}</p> */}
           {/* <p>name: {data.productname}</p> */}
         </div>
       </div>

@@ -7,7 +7,7 @@ import StarRatings from "react-star-ratings";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-function Navbar(props) {
+function Navbar() {
   const shopNowScroll = useRef(null);
   const gotoshopNowScroll = () => {
     // console.log(shopNowScroll.current.offsetTop);
@@ -45,13 +45,13 @@ function Navbar(props) {
               <img className="logoclass" src="./Final white-07.png" alt="" />
             </div>
           </div>
-          <div className="searchButton">
+          {/* <div className="searchButton">
             <input
               type="search"
               placeholder="Search"
               onChange={(event) => setQuery(event.target.value)}
             ></input>
-            {info
+             {info
               .filter((data) => {
                 if (query === "") {
                   return data;
@@ -65,8 +65,8 @@ function Navbar(props) {
                 <div className="box" key={index}>
                   <p>{data.productname}</p>
                 </div>
-              ))}
-          </div>
+              ))} 
+          </div> */}
           <div className="mainpagetext">
             <div className="gridcontainer">
               <div className="griditem1">
@@ -107,7 +107,7 @@ function Navbar(props) {
             className="griditem5"
             style={{ display: "flex", width: "100%", justifyContent: "center" }}
           >
-            Best fitness apparel delivered to your doorstep anywhere in the
+            Best fitness Equipments delivered to your doorstep anywhere in the
             World!
           </h1>
         </div>
@@ -117,8 +117,7 @@ function Navbar(props) {
           id="reference"
         >
           <h1>
-            Shop from our wide variety of apparel to get your cool gym fit
-            today!
+            Shop from our wide variety of Equipments and avail the Offer Today!
           </h1>
         </div>
         <div className="productArrayContainer">
