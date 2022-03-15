@@ -1,6 +1,6 @@
 import React from "react";
 import "./ProductPage.css";
-// import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function productpage() {
   // console.log(props.location.state);

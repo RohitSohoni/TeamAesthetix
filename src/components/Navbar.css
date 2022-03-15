@@ -13,7 +13,16 @@
   background-blend-mode: hard-light;
   background-color: rgba(0, 0, 0, 0.8);
   overflow-y: auto;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
+}
+
+.background2 {
+  width: 100%;
+  height: 100vh;
+}
+
+.productInformationCard {
+  width: 100%;
 }
 
 .logo {
@@ -46,24 +55,20 @@
   align-items: center;
 }
 
-/* .mainpagetext {
+.mainpagetext {
   position: relative;
-  color: aliceblue;
   display: flex;
   width: 100%;
+  height: 750px;
+  align-items: center;
   justify-content: center;
-  height: 600px;
-  align-items: center; 
-} */
+}
 
 .gridcontainer {
   color: aliceblue;
   align-items: center;
-  display: grid;
   width: 100%;
-  grid-template-columns: auto;
-  height: 800px;
-  justify-content: center;
+  height: 100%;
 }
 
 .griditem1 {
@@ -71,6 +76,7 @@
   height: 150px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .griditem2 {
@@ -78,9 +84,10 @@
 }
 .griditem4 {
   width: 100%;
-  height: 50px;
+  height: 110px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .shopnowbutton {
@@ -91,20 +98,28 @@
   border-radius: 20px;
   border: none;
   width: 40%;
+  height: 45px;
+  margin-top: 2em;
+}
+
+.shopnowbutton:hover {
+  cursor: pointer;
 }
 
 .griditem5 {
-  color: aliceblue;
-  padding: 20px;
+  display: flex;
   width: 100%;
-  height: 30px;
+  justify-content: center;
+  height: 130px;
+  align-items: center;
 }
 
 .griditem6 {
-  color: aliceblue;
-  font-size: small;
-  height: 100px;
-  padding: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 150px;
+  align-items: center;
 }
 
 .productArrayContainer {
@@ -112,9 +127,28 @@
   width: 100%;
   grid-template-columns: auto auto auto;
   justify-content: space-evenly;
-  height: 300px;
+  /* min-height: 940px; */
+  max-height: none;
   align-items: center;
-  gap: 30px 30px;
+  gap: 62px 30px;
+}
+
+.productContainerCard2 {
+  width: 100%;
+  max-height: none;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.productDescription {
+  font-size: 12px;
+}
+
+.productArrayItem2 {
+  margin-top: 80px;
+  /* height: 100%;
+  width: 90%; */
+  padding: 10px 0px 10px 0px;
 }
 
 .productArrayItem {
@@ -122,16 +156,30 @@
   padding: 10px;
   text-align: center;
   border-radius: 20px;
+  height: fit-content;
 }
 
-.footerContainer {
-  position: relative;
+.productArrayItem:hover {
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+}
+
+.footer {
   background-color: rgba(0, 0, 0, 0.9);
   color: aliceblue;
   width: 100%;
-  padding-bottom: 1em;
-  flex-direction: column;
-  margin-top: 100vh;
+  height: 400px;
+  margin-top: 70px;
+}
+
+.footerContainer1 {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: aliceblue;
+  width: 100%;
+  height: 400px;
+  margin-top: 0px;
 }
 
 .listUnstyled {
@@ -160,40 +208,19 @@
   height: 30px;
   padding-top: 1.4em;
 }
-
+/* 
 .newsletterText {
   width: 100%;
   display: flex;
   justify-content: center;
-}
+} */
 
-.newsletterEmailBox {
+/* .newsletterEmailBox {
   width: 100%;
   display: flex;
   justify-content: center;
   height: 30px;
-}
-
-.newsletterEmail {
-  width: 20%;
-}
-
-.signUpButton {
-  color: aliceblue;
-  font-size: medium;
-  font-weight: 600;
-  background-color: crimson;
-  border-radius: 20px;
-  border: none;
-  width: 10%;
-}
-
-.signUpClass {
-  display: flex;
-  justify-content: center;
-  height: 25px;
-  padding-top: 1em;
-}
+} */
 
 .box {
   background-color: aliceblue;
@@ -203,11 +230,144 @@
   .productArrayContainer {
     grid-template-columns: auto;
   }
-  .griditem5 {
-    font-size: 15px;
+
+  .mainpagetext {
+    font-size: 8px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    height: 570px;
   }
+
   .griditem1 {
-    font: 15px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    height: 120px;
+  }
+  .griditem3 {
+    height: 30px;
+  }
+
+  .griditem5,
+  .griditem6 {
+    height: 70px;
+  }
+
+  .griditem2 {
+    height: 50px;
+  }
+
+  .footer,
+  .footerContainer1 {
+    font-size: 8px;
+  }
+
+  .signUpButton {
+    color: aliceblue;
+    background-color: crimson;
+    border-radius: 20px;
+    border: none;
+    width: 60% !important;
+    height: 90% !important;
+    font-size: 8px;
+    padding: 20px !important;
+  }
+
+  .signUpClass {
+    display: flex;
+    justify-content: center;
+    height: 60px !important;
+    width: 100% !important;
+    align-items: center;
+    padding-top: 0px !important;
+  }
+
+  .newsletterEmailBox {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    height: 60px !important;
+  }
+
+  .newsletterEmail {
+    width: 80% !important;
+    border-radius: 20px !important;
+    text-align: center !important;
+    height: 70%;
+  }
+
+  .newsletterText {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .SearchButtonDiv {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .searchInputBox {
+    width: 70%;
+    height: 50%;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .error {
+    width: 100%;
+    height: 20px;
+    color: whitesmoke;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .AddtoCartDiv {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .BackButtonDiv {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .AddtoCartbutton {
+    width: 80%;
+    height: 70%;
+    color: black;
+    font-size: 10px;
+    font-weight: 600;
+    background-color: crimson;
+    border-radius: 20px;
+    border: none;
+  }
+
+  .BackButton {
+    width: 80%;
+    height: 70%;
+    color: whitesmoke;
+    font-size: 10px;
+    font-weight: 500;
+    background-color: rgb(54, 48, 48);
+    border-radius: 20px;
+    border: none;
+  }
+
+  .AddtoCartbutton,
+  .BackButton:hover {
+    cursor: pointer;
   }
 }
 
@@ -215,13 +375,139 @@
   .productArrayContainer {
     grid-template-columns: auto auto;
   }
-  .griditem5 {
-    font-size: 20px;
+
+  .newsletterEmailBox {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    height: 60px !important;
+  }
+
+  .newsletterEmail {
+    width: 50% !important;
+    border-radius: 20px !important;
+    text-align: center !important;
+    height: 80%;
+  }
+  .signUpButton {
+    width: 50% !important;
+    height: 85% !important;
+    font-size: 8px;
+    padding: 20px !important;
+  }
+
+  .signUpClass {
+    display: flex;
+    justify-content: center;
+    height: 60px !important;
+    width: 100% !important;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .mainpagetext {
+    font-size: 10px;
+  }
+  .error {
+    width: 100%;
+    height: 80px;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .productDescription {
+    font-size: 18px;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .productArrayContainer {
     grid-template-columns: auto auto auto;
+  }
+
+  .griditem1 {
+    height: 150px;
+    margin-top: 20px;
+  }
+
+  .griditem2 {
+    height: 100px;
+  }
+  .griditem4 {
+    height: 110px;
+  }
+
+  .griditem5 {
+    height: 130px;
+  }
+
+  .griditem6 {
+    height: 150px;
+  }
+
+  .mainpagetext {
+    font-size: 15px;
+    height: 750px;
+  }
+
+  .newsletterEmailBox {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    height: 60px !important;
+  }
+
+  .newsletterEmail {
+    width: 50% !important;
+    border-radius: 20px !important;
+    text-align: center !important;
+    height: 80%;
+  }
+  .signUpButton {
+    width: 50% !important;
+    height: 85% !important;
+    font-size: 8px;
+    padding: 20px !important;
+  }
+
+  .signUpClass {
+    display: flex;
+    justify-content: center;
+    height: 60px !important;
+    width: 100% !important;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .SearchButtonDiv {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .searchInputBox {
+    width: 30%;
+    height: 50%;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .error {
+    width: 100%;
+    height: 100px;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .AddtoCartbutton,
+  .BackButton {
+    width: 40%;
   }
 }

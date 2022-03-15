@@ -13,8 +13,6 @@ function App() {
           <Route path="/ProductPage" element={<ProductPage />} />
         </Routes>
       </Router>
-      {/* <Navbar /> */}
-      {/* <ProductPage /> */}
     </div>
   );
 }
