@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-.background {
+.background3 {
   width: 100%;
   height: 100vh;
   background-image: url("../../public/BackgroundNew2.jpg");
@@ -16,143 +16,20 @@
   overflow-x: hidden;
 }
 
-.background2 {
-  width: 100%;
-  height: 100vh;
-}
-
-.productInformationCard {
-  width: 100%;
-}
-
-.logo {
+.logo2 {
   position: relative;
   width: 100%;
   height: 0px;
   max-width: 100%;
 }
 
-.flexbox {
-  z-index: 2;
-  height: 0px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.logoclass {
+.logoclass2 {
   height: 80px;
   position: fixed;
   z-index: 10;
 }
 
-.searchButton {
-  display: grid;
-  justify-content: center;
-  margin-top: 2em;
-
-  margin-left: 70em;
-  align-items: center;
-}
-
-.mainpagetext {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 750px;
-  align-items: center;
-  justify-content: center;
-}
-
-.gridcontainer {
-  color: aliceblue;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.griditem1 {
-  width: 100%;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.griditem2 {
-  height: 100px;
-}
-.griditem4 {
-  width: 100%;
-  height: 110px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.shopnowbutton {
-  color: aliceblue;
-  font-size: medium;
-  font-weight: 600;
-  background-color: crimson;
-  border-radius: 20px;
-  border: none;
-  width: 40%;
-  height: 45px;
-  margin-top: 2em;
-}
-
-.shopnowbutton:hover {
-  cursor: pointer;
-}
-
-.griditem5 {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  height: 130px;
-  align-items: center;
-}
-
-.griditem6 {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  height: 150px;
-  align-items: center;
-}
-
-.productArrayContainer {
-  display: grid;
-  width: 100%;
-  grid-template-columns: auto auto auto;
-  justify-content: space-evenly;
-  /* min-height: 940px; */
-  max-height: none;
-  align-items: center;
-  gap: 62px 30px;
-}
-
-.productContainerCard2 {
-  /* background-color: aliceblue; */
-  width: 100%;
-  max-height: none;
-  display: grid;
-  grid-template-columns: auto;
-}
-
-.productDescription {
-  font-size: 12px;
-}
-
-.productArrayItem2 {
-  margin-top: 80px;
-  /* height: 100%;
-  width: 90%; */
-  padding: 10px 0px 10px 0px;
-}
-
-.productArrayItem {
+.productArrayItemCart {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
   width: 100%;
@@ -161,19 +38,121 @@
   height: fit-content;
   margin-top: 100px;
 }
-.productArrayGrid {
+
+.productArrayItemGrid {
   display: grid;
-  grid-template-columns: auto;
-  gap: 40px 40px;
-}
-
-.productArrayItem:hover {
-  cursor: pointer;
-  box-sizing: border-box;
+  justify-content: center;
   width: 100%;
-  padding: 5px;
 }
 
+.reserveForm {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 35%;
+  width: 50%;
+  border-radius: 20px;
+}
+
+.reserveMain {
+  background-image: url("../../public/BackgroundNew2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reserveInputEmail {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+}
+
+.reserveInputName {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 80px;
+  align-items: center;
+}
+
+.reserveEmail {
+  width: 60%;
+  border-radius: 20px;
+  border: none;
+  color: black;
+  text-align: center;
+  height: 60%;
+}
+::placeholder {
+  color: black;
+}
+
+.reserveName {
+  width: 60%;
+  border-radius: 20px;
+  border: none;
+  color: black;
+  text-align: center;
+  height: 45%;
+}
+
+.buyButtonClass {
+  width: 100%;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.buyButton {
+  color: aliceblue;
+  font-size: medium;
+  font-weight: 600;
+  background-color: crimson;
+  border-radius: 20px;
+  border: none;
+  width: 40%;
+  height: 35px;
+  margin-top: 2em;
+}
+
+.proceedButtonClass {
+  width: 100%;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.proceedButton {
+  color: aliceblue;
+  font-size: medium;
+  font-weight: 600;
+  background-color: crimson;
+  border-radius: 20px;
+  border: none;
+  width: 20%;
+  height: 35px;
+  margin-top: 2em;
+}
+/* .productArrayGrid {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+} */
+
+/* .testclass {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+} */
 .footer {
   background-color: rgba(0, 0, 0, 0.9);
   color: aliceblue;
@@ -216,19 +195,6 @@
   height: 30px;
   padding-top: 1.4em;
 }
-/* 
-.newsletterText {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-} */
-
-/* .newsletterEmailBox {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 30px;
-} */
 
 .box {
   background-color: aliceblue;

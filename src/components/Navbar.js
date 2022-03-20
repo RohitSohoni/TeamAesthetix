@@ -41,6 +41,27 @@ function Navbar() {
     setResult(false);
   };
 
+  //For AddToCart
+
+  const redirectCart = () => {
+    navigate("/Cart");
+    console.log("HI");
+  };
+
+  const addToCart = () => {
+    var currentCart = {};
+    if (JSON.parse(localStorage.getItem("cartItem")) !== null) {
+      currentCart = JSON.parse(localStorage.getItem("cartItem"));
+    }
+
+    currentCart[selectedProduct.productname] = selectedProduct;
+
+    var cartString = JSON.stringify(currentCart);
+    console.log(currentCart);
+    localStorage.setItem("cartItem", cartString);
+    console.log(localStorage.getItem("cartItem"));
+  };
+
   if (Result === false)
     return (
       <>
@@ -48,11 +69,24 @@ function Navbar() {
           <div className="background">
             <div className="navbar">
               <div className="flexbox">
-                <div className="logo">
+                <div
+                  className="logo"
+                  onClick={() => {
+                    localStorage.clear();
+                  }}
+                >
                   <img
                     className="logoclass"
                     src="./Final white-07.png"
                     alt=""
+                  />
+                </div>
+                <div className="cartLogo">
+                  <img
+                    className="cartLogoIMG"
+                    src="./cart-icon-png-white-2.jpg"
+                    alt=""
+                    onClick={redirectCart}
                   />
                 </div>
               </div>
@@ -257,6 +291,14 @@ function Navbar() {
             <div className="logo">
               <img className="logoclass" src="./Final white-07.png" alt="" />
             </div>
+            <div className="cartLogo">
+              <img
+                className="cartLogoIMG"
+                src="./cart-icon-png-white-2.jpg"
+                alt=""
+                onClick={redirectCart}
+              />
+            </div>
           </div>
           <div className="productContainerCard2">
             <div
@@ -335,7 +377,7 @@ function Navbar() {
                   starDimension="30px"
                 />
               </div>
-              <div className="AddtoCartDiv">
+              <div className="AddtoCartDiv" onClick={addToCart}>
                 <button className="AddtoCartbutton">Add to Cart</button>
               </div>
               <div className="BackButtonDiv">
